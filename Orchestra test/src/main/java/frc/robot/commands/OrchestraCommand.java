@@ -20,6 +20,7 @@ public class OrchestraCommand extends Command{
     @Override
     public void execute(){
         orchestraSubsystem.play();
+        System.out.println(orchestraSubsystem.getTime());
     }
 
     @Override
