@@ -8,6 +8,8 @@ public class OrchestraCommand extends Command{
 
     public OrchestraCommand(OrchestraSubsystem orchestraSubsystem){
         this.orchestraSubsystem = orchestraSubsystem;
+
+        addRequirements(orchestraSubsystem);
     }
 
     @Override

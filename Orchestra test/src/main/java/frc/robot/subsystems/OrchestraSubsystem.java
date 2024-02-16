@@ -4,16 +4,15 @@ import com.ctre.phoenix6.Orchestra;
 import com.ctre.phoenix6.hardware.TalonFX;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
-import frc.robot.Constants;
 
 public class OrchestraSubsystem extends SubsystemBase{
-    private final TalonFX motor;
     private final Orchestra orchestra;
 
-    public OrchestraSubsystem(){
-        motor = new TalonFX(Constants.ORCHESTA_MOTOR);
-        orchestra = new Orchestra();
-        orchestra.addInstrument(motor);
+    public OrchestraSubsystem(int... motorIDs){
+        this.orchestra = new Orchestra();
+        for (int i : motorIDs){
+            orchestra.addInstrument(new TalonFX(i));
+        }
     }
 
     public void loadSong(){

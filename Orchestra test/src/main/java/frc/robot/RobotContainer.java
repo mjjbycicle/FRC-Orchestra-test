@@ -8,7 +8,7 @@ import frc.robot.commands.OrchestraCommand;
 import frc.robot.subsystems.OrchestraSubsystem;
 
 public class RobotContainer {
-  private final OrchestraSubsystem orchestraSubsystem = new OrchestraSubsystem();
+  private final OrchestraSubsystem orchestraSubsystem = new OrchestraSubsystem(6, 8, 2, 4);
 
   public RobotContainer() {
     configureBindings();
